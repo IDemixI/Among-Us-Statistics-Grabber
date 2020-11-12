@@ -77,7 +77,6 @@ Or just [create an issue](https://github.com/IDemixI/Among-Us-Statistics-Grabber
 
 - **How do I uninstall the application?**
   - You can remove the application by simply deleting the executable and removing the Launch Options from Among Us via Steam.
-![Uninstall GIF](https://i.imgur.com/bfeJ056.gif)
 
 ---
 
