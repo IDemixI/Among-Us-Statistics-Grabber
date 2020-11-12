@@ -41,8 +41,6 @@ Among Us, Statistics, Data Analytics, Leaderboard, Stats
 add the following line to your Steam: Among Us Launch Options
 - `python-interpreter "C:\path\to\script\or\executable" %command%`
 
-![Manual Install GIF](https://i.imgur.com/ZOIqJDI.gif)
-
 ---
 
 ## Features
@@ -79,7 +77,7 @@ Or just [create an issue](https://github.com/IDemixI/Among-Us-Statistics-Grabber
 
 - **How do I uninstall the application?**
   - You can remove the application by simply deleting the executable and removing the Launch Options from Among Us via Steam.
-    ![Uninstall GIF](https://i.imgur.com/0bbsayx.gif)
+![Uninstall GIF](https://i.imgur.com/bfeJ056.gif)
 
 ---
 
