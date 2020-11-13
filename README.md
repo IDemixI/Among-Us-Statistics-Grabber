@@ -4,6 +4,8 @@
 
 A script written in Python to extract and upload your Among Us player statistics to a REST endpoint so you can share with your friends and build a leaderboard or analyse data.
 
+The current leaderboard can be found at: [http://demix-server.ddns.net:2281/amongus](http://demix-server.ddns.net:2281/amongus)
+
 Among Us, Statistics, Data Analytics, Leaderboard, Stats
 
 [![GitHub Issues](https://img.shields.io/github/issues/IDemixI/Among-Us-Statistics-Grabber)](https://github.com/IDemixI/Among-Us-Statistics-Grabber/issues)
@@ -18,6 +20,7 @@ Among Us, Statistics, Data Analytics, Leaderboard, Stats
 
 - [Installation](#installation)
 - [Features](#features)
+- [JSON Schema](#json-schema)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
 - [FAQ](#faq)
@@ -38,8 +41,11 @@ Among Us, Statistics, Data Analytics, Leaderboard, Stats
 ![Settings GIF](https://i.imgur.com/pnlpk04.gif)&nbsp;&nbsp;&nbsp;![Tray Icon GIF](https://i.imgur.com/wYzImHO.gif)
 
 ### Manual (Using either Python script or Executable)
-add the following line to your Steam: Among Us Launch Options
-- `python-interpreter "C:\path\to\script\or\executable" %command%`
+
+Add the following line to your Steam: Among Us Launch Options if you're running the script manually via Python or you've downloaded the binary.
+
+- Python: `python-interpreter "C:\path\to\script.py" %command%`
+- Binary: `"C:\path\to\executable.exe" %command%`
 
 ---
 
@@ -49,6 +55,42 @@ add the following line to your Steam: Among Us Launch Options
 - Player Stats file will be polled on an interval while playing Among Us and will update live, as you play.
 - Additional fields are sent in the POST Data - Unique Player ID, Last Used Nickname, Date & Time of your last change to statistics.
 - Log file written to `C:\Users\<user>\AppData\LocalLow\Innersloth\Among Us\statGrabber.log` which tracks successful POST requests and also if you've opened/closed the game. 
+
+---
+
+## JSON Schema
+
+Your statistics are organised into a simple JSON object before being posted to your REST endpoint. The elements you're able to access are as follows:
+```
+User ID
+Nickname
+lastUpdated
+Bodies Reported
+Emergencies Called
+Tasks Completed
+All Tasks Completed
+Sabotages Fixed
+Impostor Kills
+Times Murdered
+Times Ejected
+Crewmate Streak
+Times Impostor
+Times Crewmate
+Games Started
+Games Finished
+Crewmate Vote Wins
+Crewmate Task Wins
+Impostor Vote Wins
+Impostor Kill Wins
+Impostor Sabotage Wins
+Unknown 1
+Unknown 2
+Unknown 3
+Unknown 4
+Unknown 5
+Unknown 6
+Unknown 7
+```
 
 ---
 
