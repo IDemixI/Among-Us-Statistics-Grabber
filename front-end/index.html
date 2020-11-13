@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+   <header>
+      <title>Among Us: Player Statistics Leaderboard v1.0</title>
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.flash.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+      <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.print.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+      <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
+   </header>
+   <body style="height: 100vh; background-image: linear-gradient(to bottom, #000000, #1d0010, #280022, #2a003b, #13085a);">
+      <div class="container-fluid" style="width: 80%; height: 80%; top: 10%; position: relative; background: rgba(255,255,255,0.9); border-radius: 10px; padding: 2vmin;">
+         <table id="statistics" class="table table-striped table-bordered display nowrap">
+            <thead>
+               <th>Nickname</th>
+               <th>Last Updated</th>
+               <th>Bodies Reported</th>
+               <th>Emergencies Called</th>
+               <th>Tasks Completed</th>
+               <th>All Tasks Completed</th>
+               <th>Sabotages Fixed</th>
+               <th>Impostor Kills</th>
+               <th>Times Murdered</th>
+               <th>Times Ejected</th>
+               <th>Crewmate Streak</th>
+               <th>Times Impostor</th>
+               <th>Times Crewmate</th>
+               <th>Games Started</th>
+               <th>Games Finished</th>
+               <th>Impostor Vote Wins</th>
+               <th>Impostor Kill Wins</th>
+               <th>Impostor Sabotage Wins</th>
+               <th>Crewmate Vote Wins</th>
+               <th>Crewmate Task Wins</th>
+            </thead>
+            {% for row in rows %}
+            <tr>
+               <td>{{row[2]}}</td>
+               <td>{{row[3]}}</td>
+               <td>{{row[4]}}</td>
+               <td>{{row[5]}}</td>
+               <td>{{row[6]}}</td>
+               <td>{{row[7]}}</td>
+               <td>{{row[8]}}</td>
+               <td>{{row[9]}}</td>
+               <td>{{row[10]}}</td>
+               <td>{{row[11]}}</td>
+               <td>{{row[12]}}</td>
+               <td>{{row[13]}}</td>
+               <td>{{row[14]}}</td>
+               <td>{{row[15]}}</td>
+               <td>{{row[16]}}</td>
+               <td>{{row[19]}}</td>
+               <td>{{row[20]}}</td>
+               <td>{{row[21]}}</td>
+               <td>{{row[17]}}</td>
+               <td>{{row[18]}}</td>
+            </tr>
+            {% endfor %}
+         </table>
+      </div>
+      <script>
+         $(document).ready(function() {
+             $('#statistics').DataTable({
+                            "fixedHeader": true,
+                            "responsive": true,
+                            "lengthChange": false,
+                            "scrollX": true,
+                            "info": false,
+                            dom: 'Bfrtip',
+                            buttons: [
+                                'copy',
+                                {
+                                    extend: 'csvHtml5',
+                                    title: 'Among Us Leaderboard'
+                                },                                
+                                {
+                                    extend: 'excelHtml5',
+                                    title: 'Among Us Leaderboard'
+                                },
+                            ]
+                        });
+         } );
+      </script>
+   </body>
+</html>
