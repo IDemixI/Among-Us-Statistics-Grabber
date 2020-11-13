@@ -228,7 +228,10 @@ def updateConfig(file):
 # Function to open the GUI which allows users to change settings, etc
 def openGUI(mode):
 
-    # Path to loginusers.vdf file which contains list of all Steam accounts on PC.
+    # Define URL as global so we can change the value in the updater thread too
+    global URL
+
+    # Path to loginusers.vdf file which contains list of all Steam accounts on PC
     steamUsers = get_reg(r"SteamPath", REG_STEAM) + "/config/loginusers.vdf"
 
     # Extract the currently used profile from the windows registry (if it exists)
