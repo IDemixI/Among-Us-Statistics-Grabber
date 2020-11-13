@@ -5,7 +5,9 @@ import time
 import datetime
 import json
 import requests
-import sys, os, glob
+import subprocess
+import os, os.path
+import sys, glob
 import psutil
 
 # If the application is run as a bundle, the PyInstaller bootloader extends the sys module by a flag frozen=True and sets the app path into variable _MEIPASS'.
@@ -15,6 +17,27 @@ if getattr(sys, 'frozen', False):
 else:
     APP_DIR = os.path.dirname(os.path.abspath(__file__))
     APP_EXE = os.path.abspath(__file__).replace('\\','\\\\')
+
+def subprocess_args(include_stdout=True):
+    if hasattr(subprocess, 'STARTUPINFO'):
+        si = subprocess.STARTUPINFO()
+        si.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        env = os.environ
+    else:
+        si = None
+        env = None
+
+    if include_stdout:
+        ret = {'stdout': subprocess.PIPE}
+    else:
+        ret = {}
+
+    ret.update({'stdin': subprocess.PIPE,
+                'stderr': subprocess.PIPE,
+                'startupinfo': si,
+                'env': env })
+    return ret
+
 
 # List of all currently monitored Statistics, including 7 unknown ones that are being collected.
 stats = ['Bodies Reported',
@@ -78,6 +101,7 @@ REG_AMONG_US = r"SOFTWARE\Among Us Stat Grabber"
 STAT_DIR = rf"C:\Users\{os.getlogin()}\AppData\LocalLow\Innersloth\Among Us"
 STEAM_CONFIG_PATH = get_reg(r"SteamPath", REG_STEAM) + "/userdata/{}" + "/config/localconfig.vdf"
 STEAM_EXE = "steam.exe"
+STEAM_EXE_PATH = get_reg(r"SteamExe", REG_STEAM)
 STEAMID64 = 76561197960265728
 VERSION = "1.0"
 URL = 'http://demix-server.ddns.net:2281/amongus'
@@ -309,7 +333,7 @@ def openGUI(mode):
                 closeSteam = warningPopup.read() 
                 warningPopup.close()
                 if closeSteam[0] == 'Yes':
-                    os.system("TASKKILL /F /IM steam.exe")
+                    subprocess.call(["TASKKILL","/F","/IM",STEAM_EXE], shell=True)
                     time.sleep(2)
                     steamOpen = True
                 else:
@@ -328,7 +352,7 @@ def openGUI(mode):
             if mode == "INTERACTIVE":
                 sg.Window("Script has been Installed!", layoutPopup2, auto_size_buttons=True, resizable=False, disable_close=False, disable_minimize=True, icon=ICON).read()
                 if steamOpen:
-                    os.popen(f"\"{get_reg('SteamExe', REG_STEAM)}\"")
+                    subprocess.Popen(STEAM_EXE_PATH)
                 break
             else:
                 sg.popup("Settings have been successfully applied.")
