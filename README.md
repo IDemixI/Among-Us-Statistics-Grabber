@@ -48,6 +48,7 @@ add the following line to your Steam: Among Us Launch Options
 - Ability to change REST Endpoint to push your JSON statistics to a database/front-end of your choice.
 - Player Stats file will be polled on an interval while playing Among Us and will update live, as you play.
 - Additional fields are sent in the POST Data - Unique Player ID, Last Used Nickname, Date & Time of your last change to statistics.
+- Log file written to `C:\Users\<user>\AppData\LocalLow\Innersloth\Among Us\statGrabber.log` which tracks successful POST requests and also if you've opened/closed the game. 
 
 ---
 
@@ -77,7 +78,6 @@ Or just [create an issue](https://github.com/IDemixI/Among-Us-Statistics-Grabber
 
 - **How do I uninstall the application?**
   - You can remove the application by simply deleting the executable and removing the Launch Options from Among Us via Steam.
-![Uninstall GIF](https://i.imgur.com/bfeJ056.gif)
 
 ---
 
