@@ -33,6 +33,7 @@ Among Us, Statistics, Data Analytics, Leaderboard, Stats
 ### Executable
 
 - Simply download the latest release and run it once to perform the setup. After this, the program will run whenever you launch Among Us via Steam.
+- If you decide to move the location of the executable, please run it again from the new location or it will not work. I recommend placing it somewhere like `C:\Users\<user>\Documents\Among Us SG`.
 
 ### Python
 
@@ -40,9 +41,9 @@ Among Us, Statistics, Data Analytics, Leaderboard, Stats
 
 ![Settings GIF](https://i.imgur.com/pnlpk04.gif)&nbsp;&nbsp;&nbsp;![Tray Icon GIF](https://i.imgur.com/wYzImHO.gif)
 
-### Manual (Using either Python script or Executable)
+### Manual Setup (Using either Python script or Executable)
 
-Add the following line to your Steam: Among Us Launch Options if you're running the script manually via Python or you've downloaded the binary.
+Add the following line to your Steam: Among Us Launch Options if you're running the script manually via Python or you've downloaded the binary, but don't want to "Install" it automatically.
 
 - Python: `python-interpreter "C:\path\to\script.py" %command%`
 - Binary: `"C:\path\to\executable.exe" %command%`
