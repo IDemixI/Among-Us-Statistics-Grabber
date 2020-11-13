@@ -4,6 +4,8 @@
 
 A script written in Python to extract and upload your Among Us player statistics to a REST endpoint so you can share with your friends and build a leaderboard or analyse data.
 
+The current leaderboard can be found at: ![http://demix-server.ddns.net:2281/amongus](http://demix-server.ddns.net:2281/amongus)
+
 Among Us, Statistics, Data Analytics, Leaderboard, Stats
 
 [![GitHub Issues](https://img.shields.io/github/issues/IDemixI/Among-Us-Statistics-Grabber)](https://github.com/IDemixI/Among-Us-Statistics-Grabber/issues)
