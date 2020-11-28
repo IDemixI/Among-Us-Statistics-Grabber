@@ -104,7 +104,12 @@ STEAM_EXE = "steam.exe"
 STEAM_EXE_PATH = get_reg(r"SteamExe", REG_STEAM)
 STEAMID64 = 76561197960265728
 VERSION = "1.0"
-URL = 'http://demix-server.ddns.net:2281/amongus'
+
+# Check to see if REST URL exists in registry. If so, use this value instead of default
+if get_reg(r"REST Endpoint", REG_AMONG_US):
+    URL = get_reg(r"REST Endpoint", REG_AMONG_US)
+else:
+    URL = 'https://amongus.demix.network/leaderboard'
 
 # Function to extract the unique Among Us User ID from file
 def getID(file):
@@ -255,10 +260,6 @@ def openGUI(mode):
                 userKey[(line.replace('\t\t"PersonaName"\t\t', '').replace('"','').replace('\n', ''))] = int(lines[i - 3].replace('\t','').replace('"', '')) - STEAMID64
                 userVal.append(line.replace('\t\t"PersonaName"\t\t', '').replace('"','').replace('\n', ''))
             i += 1
-
-    # Check to see if REST URL exists in registry. If so, use this value instead of default
-    if get_reg(r"REST Endpoint", REG_AMONG_US):
-        URL = get_reg(r"REST Endpoint", REG_AMONG_US)
 
     # Define the layout of our GUI and the conditions required
     layout = [
