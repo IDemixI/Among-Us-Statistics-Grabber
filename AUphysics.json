@@ -2,7 +2,7 @@
 	"player": {
 		"type": "fromPhysicsEditor",
 		"label": "player",
-		"isStatic": true,
+		"isStatic": false,
 		"density": 0.10000000149011612,
 		"restitution": 0,
 		"friction": 0.10000000149011612,
