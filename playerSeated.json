@@ -1,0 +1,230 @@
+{
+	"textures": [
+		{
+			"image": "playerSeated.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 493,
+				"h": 204
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "Seat to Standing_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 111,
+						"h": 115
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 111,
+						"h": 115
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 111,
+						"h": 115
+					}
+				},
+				{
+					"filename": "Seat to Standing_08.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 101,
+						"h": 85
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 101,
+						"h": 85
+					},
+					"frame": {
+						"x": 1,
+						"y": 118,
+						"w": 101,
+						"h": 85
+					}
+				},
+				{
+					"filename": "Seat to Standing_07.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 99,
+						"h": 77
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 99,
+						"h": 77
+					},
+					"frame": {
+						"x": 104,
+						"y": 118,
+						"w": 99,
+						"h": 77
+					}
+				},
+				{
+					"filename": "Seat to Standing_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 108,
+						"h": 115
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 108,
+						"h": 115
+					},
+					"frame": {
+						"x": 114,
+						"y": 1,
+						"w": 108,
+						"h": 115
+					}
+				},
+				{
+					"filename": "Seat to Standing_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 98,
+						"h": 104
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 98,
+						"h": 104
+					},
+					"frame": {
+						"x": 224,
+						"y": 1,
+						"w": 98,
+						"h": 104
+					}
+				},
+				{
+					"filename": "Seat to Standing_09.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 94,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 94,
+						"h": 96
+					},
+					"frame": {
+						"x": 224,
+						"y": 107,
+						"w": 94,
+						"h": 96
+					}
+				},
+				{
+					"filename": "Seat to Standing_04.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 85,
+						"h": 91
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 85,
+						"h": 91
+					},
+					"frame": {
+						"x": 320,
+						"y": 107,
+						"w": 85,
+						"h": 91
+					}
+				},
+				{
+					"filename": "Seat to Standing_06.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 85,
+						"h": 89
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 85,
+						"h": 89
+					},
+					"frame": {
+						"x": 407,
+						"y": 1,
+						"w": 85,
+						"h": 89
+					}
+				},
+				{
+					"filename": "Seat to Standing_10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 75,
+						"h": 92
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 75,
+						"h": 92
+					},
+					"frame": {
+						"x": 324,
+						"y": 1,
+						"w": 75,
+						"h": 92
+					}
+				},
+				{
+					"filename": "Seat to Standing_05.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 84,
+						"h": 89
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 84,
+						"h": 89
+					},
+					"frame": {
+						"x": 407,
+						"y": 92,
+						"w": 84,
+						"h": 89
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:566e3e28b2b79ffd9c1a440da3792bc2:f243d926a24380efa084aa4022fd148a:0c2534b4a89edcc81f9f82b567c224b6$"
+	}
+}
